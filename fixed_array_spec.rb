@@ -12,6 +12,6 @@ describe FixedArray do
   end
 
   it "throws an error if you try to set an index out of bounds" do
-    expect(fa.set(8, "whoa there")).to raise_error
+    expect{fa.set(8, "whoa there")}.to raise_error(FixedArray::OutOfBoundException, "You cant do that")
   end
 end
